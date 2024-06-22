@@ -12,7 +12,7 @@ const FilterTodoList = () => {
     dispatch(update_search_term(value));
   };
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex flex-col sm:flex-row gap-y-4 items-center justify-between">
       <FilterButton />
       <div className="flex items-center mb-4">
         <input

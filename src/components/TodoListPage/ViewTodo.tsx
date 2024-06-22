@@ -8,7 +8,7 @@ const ViewTodo = ({ todo, index, setUpdateItem }: ITodoPropsType) => {
     <>
       <button onClick={() => dispatch(toggle_todo(todo.id))} className="flex items-center">
         <span className="mr-4 text-gray-500">{index + 1}</span>
-        <span className={`mr-4 ${todo.completed ? 'line-through text-red-500' : ''}`}>
+        <span className={`mr-4 sm:w-[400px] text-left ${todo.completed ? 'line-through text-red-500' : ''}`}>
           {todo.title}
         </span>
       </button>
