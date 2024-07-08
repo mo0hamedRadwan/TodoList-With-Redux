@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ITodoPropsType } from '../../types';
 import { useDispatch } from 'react-redux';
 import { update_todo } from '../../redux/actions';
+import icons from '../../constant/icons';
 
 const UpdateTodo = ({ todo, index, setUpdateItem }: ITodoPropsType) => {
   const [newTitle, setNewTitle] = useState<string>(todo.title);
@@ -27,10 +28,10 @@ const UpdateTodo = ({ todo, index, setUpdateItem }: ITodoPropsType) => {
       </div>
       <div className="space-x-3 ml-8 flex items-center">
         <button onClick={handleUpdate}>
-          <img src="./src/assets/icons/done.png" alt="done update todo" className="w-6 h-6" />
+          <img src={icons.deleteIcon} alt="done update todo" className="w-6 h-6" />
         </button>
         <button onClick={() => setUpdateItem!(false)}>
-          <img src="./src/assets/icons/cancel.png" alt="cancel update todo" className="w-6 h-6" />
+          <img src={icons.cancelIcon} alt="cancel update todo" className="w-6 h-6" />
         </button>
       </div>
     </>

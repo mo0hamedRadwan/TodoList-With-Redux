@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { remove_todo, toggle_todo } from '../../redux/actions';
 import { ITodoPropsType } from '../../types';
+import icons from '../../constant/icons';
 
 const ViewTodo = ({ todo, index, setUpdateItem }: ITodoPropsType) => {
   const dispatch = useDispatch();
@@ -14,10 +15,10 @@ const ViewTodo = ({ todo, index, setUpdateItem }: ITodoPropsType) => {
       </button>
       <div className="space-x-3 ml-8 flex items-center">
         <button onClick={() => setUpdateItem!(true)}>
-          <img src="./src/assets/icons/edit.png" alt="edit todo" className="w-6 h-6" />
+          <img src={icons.editIcon} alt="edit todo" className="w-6 h-6" />
         </button>
         <button onClick={() => dispatch(remove_todo(todo.id))}>
-          <img src="./src/assets/icons/delete.png" alt="delete todo" className="w-6 h-6" />
+          <img src={icons.deleteIcon} alt="delete todo" className="w-6 h-6" />
         </button>
       </div>
     </>
